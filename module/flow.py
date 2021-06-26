@@ -1,6 +1,7 @@
 from .odefunc import ODEfunc, ODEnet
 from .normalization import MovingBatchNorm1d
 from .cnf import CNF, SequentialFlow
+import torch
 
 
 def count_nfe(model):

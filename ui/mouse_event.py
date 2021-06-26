@@ -60,11 +60,13 @@ class GraphicsScene(QGraphicsScene):
 
     def showImage(self, point):
         point2D = np.array([point.x(), point.y()]) / 1024
+        print(point2D)
         distances, indices = self.Form.nbrs.kneighbors(point2D.reshape(-1, 2))
         # print(distances, indices)
-
+        print(distances, indices)
 
         self.pickedImageIndex = int(indices)
+        print(self.pickedImageIndex)
         # img_path = self.Form.img_list[self.pickedImageIndex]
 
 
